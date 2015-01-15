@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-VX-9D1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cQm-yv-lSG">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KNl-dN-AHt" customClass="ImageCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon_1" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-Zs-QsG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="jPd-Zs-QsG"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="jPd-Zs-QsG"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="imageView" destination="jPd-Zs-QsG" id="tyq-tl-So4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="5n7-Rc-70v"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Lx5-Fy-O4r"/>
+                                </connections>
+                            </collectionView>
+                            <view hidden="YES" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvi-6G-C8r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lH-yi-Fhs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HEB-ep-Tpp" appends="YES" id="6Uc-W9-H5L"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jIX-VX-9D1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="8" id="1xW-98-Dsh"/>
+                            <constraint firstItem="6lH-yi-Fhs" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-546" id="2Eo-rE-ufi"/>
+                            <constraint firstItem="hvi-6G-C8r" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4F9-Lm-KkQ"/>
+                            <constraint firstItem="jIX-VX-9D1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="AFu-uv-zh6"/>
+                            <constraint firstItem="6lH-yi-Fhs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="BNT-RD-blj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jIX-VX-9D1" secondAttribute="trailing" constant="-16" id="Cz5-rI-R3z"/>
+                            <constraint firstItem="hvi-6G-C8r" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ij3-dr-Xid"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6lH-yi-Fhs" secondAttribute="trailing" constant="-16" id="P2B-t6-9mb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hvi-6G-C8r" secondAttribute="bottom" id="Vzo-CV-z9i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hvi-6G-C8r" secondAttribute="trailing" constant="-16" id="XWh-IX-wn7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6lH-yi-Fhs" secondAttribute="bottom" constant="546" id="Xmi-nD-dmX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jIX-VX-9D1" secondAttribute="bottom" constant="-8" id="a9p-xP-bL3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jIX-VX-9D1"/>
+                                <exclude reference="hvi-6G-C8r"/>
+                                <exclude reference="6lH-yi-Fhs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4F9-Lm-KkQ"/>
+                                <exclude reference="Ij3-dr-Xid"/>
+                                <exclude reference="XWh-IX-wn7"/>
+                                <exclude reference="1xW-98-Dsh"/>
+                                <exclude reference="AFu-uv-zh6"/>
+                                <exclude reference="Cz5-rI-R3z"/>
+                                <exclude reference="a9p-xP-bL3"/>
+                                <exclude reference="2Eo-rE-ufi"/>
+                                <exclude reference="BNT-RD-blj"/>
+                                <exclude reference="P2B-t6-9mb"/>
+                                <exclude reference="Vzo-CV-z9i"/>
+                                <exclude reference="Xmi-nD-dmX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jIX-VX-9D1"/>
+                                <include reference="hvi-6G-C8r"/>
+                                <include reference="6lH-yi-Fhs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4F9-Lm-KkQ"/>
+                                <include reference="Ij3-dr-Xid"/>
+                                <include reference="XWh-IX-wn7"/>
+                                <include reference="1xW-98-Dsh"/>
+                                <include reference="AFu-uv-zh6"/>
+                                <include reference="Cz5-rI-R3z"/>
+                                <include reference="a9p-xP-bL3"/>
+                                <include reference="2Eo-rE-ufi"/>
+                                <include reference="BNT-RD-blj"/>
+                                <include reference="P2B-t6-9mb"/>
+                                <include reference="Vzo-CV-z9i"/>
+                                <include reference="Xmi-nD-dmX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="jIX-VX-9D1" id="4jA-nk-Kov"/>
+                        <outlet property="gayView" destination="hvi-6G-C8r" id="xre-sG-xZv"/>
+                        <outlet property="shadeView" destination="6lH-yi-Fhs" id="6rR-18-gb0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="HEB-ep-Tpp">
+                    <connections>
+                        <action selector="panHandler:" destination="vXZ-lx-hvc" id="V8C-c7-iKM"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="439.5" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moon_1" width="690" height="388"/>
+    </resources>
+</document>
